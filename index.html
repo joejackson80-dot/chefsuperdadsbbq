@@ -67,8 +67,7 @@
     <header id="header">
         <div class="container nav-container">
             <div class="logo-group">
-                <a href="#" class="logo">Chef SuperDad's BBQ & Catering</a>
-                <img src="images/cow_diagram.png" alt="Cow Cuts Diagram" class="header-cow-icon">
+                <a href="#" class="logo">Chef SuperDad's</a>
             </div>
             <nav>
                 <ul class="nav-links" id="nav-links">
@@ -249,28 +248,81 @@
         </div>
     </section>
 
-    <!-- Gallery Section (Carousel) -->
+    <!-- Gallery Section (Immersive Bento) -->
     <section class="gallery" id="gallery">
         <div class="container">
             <div class="section-title">
                 <h2>Our Pit in Action</h2>
+                <div class="underline"></div>
             </div>
             
-            <div class="carousel-container">
-                <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                <div class="carousel-track-container">
-                    <div class="carousel-track" id="carousel-track">
-                        <!-- Images will be populated by JS for cleaner HTML or listed here -->
-                        <div class="carousel-slide"><img src="images/gallery/gallery-kitchen.jpg" alt="Kitchen"></div>
-                        <div class="carousel-slide"><img src="images/gallery/gallery-catering-spread.jpg" alt="Catering"></div>
-                        <div class="carousel-slide"><img src="images/gallery/1000015478.JPG" alt="Meatloaf"></div>
-                        <div class="carousel-slide"><img src="images/gallery/1000006194.JPG" alt="Ribs"></div>
-                        <div class="carousel-slide"><img src="images/gallery/1000006218.JPG" alt="Chicken"></div>
-                        <div class="carousel-slide"><img src="images/gallery/1000015104.JPG" alt="Mac n Cheese"></div>
-                        <div class="carousel-slide"><img src="images/gallery/1000005750.JPG" alt="Catering"></div>
+            <div class="bento-grid">
+                <!-- Row 1 & 2 -->
+                <div class="bento-item bento-featured">
+                    <img src="images/gallery/gallery-kitchen.jpg" alt="The Pitmaster">
+                    <div class="bento-overlay">
+                        <div class="overlay-info">
+                            <h4>The Pitmaster</h4>
+                            <p>Real Smoke. Real Tradition.</p>
+                        </div>
                     </div>
                 </div>
-                <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                <div class="bento-item">
+                    <img src="images/gallery/1000006194.JPG" alt="Smoked Ribs">
+                    <div class="bento-overlay">
+                        <div class="overlay-info">
+                            <h4>Glazed Ribs</h4>
+                            <p>Fall-off-the-bone</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item bento-tall">
+                    <img src="images/gallery/1000015104.JPG" alt="Mac n Cheese">
+                    <div class="bento-overlay">
+                        <div class="overlay-info">
+                            <h4>Baked Sides</h4>
+                            <p>Soul Food Classics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item">
+                    <img src="images/gallery/1000006218.JPG" alt="Smoked Chicken">
+                    <div class="bento-overlay">
+                        <div class="overlay-info">
+                            <h4>Pit Chicken</h4>
+                            <p>Juicy & Tender</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="bento-item bento-wide">
+                    <img src="images/gallery/gallery-catering-spread.jpg" alt="Catering Spread">
+                    <div class="bento-overlay">
+                        <div class="overlay-info">
+                            <h4>Full Service Catering</h4>
+                            <p>Feeding the Community</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item">
+                    <img src="images/gallery/1000015478.JPG" alt="Smoked Meatloaf">
+                    <div class="bento-overlay">
+                        <div class="overlay-info">
+                            <h4>Signature Meatloaf</h4>
+                            <p>A Local Favorite</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item">
+                    <img src="images/gallery/1000004933.JPG" alt="Smoked Potatoes">
+                    <div class="bento-overlay">
+                        <div class="overlay-info">
+                            <h4>Smoked Potatoes</h4>
+                            <p>Signature Side</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

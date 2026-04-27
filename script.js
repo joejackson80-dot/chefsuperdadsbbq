@@ -75,43 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
         animate();
     }
 
-    // --- Carousel Logic ---
-    const track = document.getElementById('carousel-track');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    
-    if (track) {
-        let index = 0;
-        const slides = track.children;
-        
-        function updateCarousel() {
-            const slideWidth = slides[0].getBoundingClientRect().width + 20; // 20 is the gap
-            track.style.transform = `translateX(-${index * slideWidth}px)`;
-        }
-
-        nextBtn.addEventListener('click', () => {
-            const visibleCount = window.innerWidth > 992 ? 3 : (window.innerWidth > 576 ? 2 : 1);
-            if (index < slides.length - visibleCount) {
-                index++;
-                updateCarousel();
-            } else {
-                index = 0; // Loop
-                updateCarousel();
-            }
-        });
-
-        prevBtn.addEventListener('click', () => {
-            if (index > 0) {
-                index--;
-                updateCarousel();
-            }
-        });
-
-        window.addEventListener('resize', updateCarousel);
-    }
-
-    // --- Text Reveal & Scroll Animations ---
-    const observerOptions = { threshold: 0.2 };
+    // --- Scroll Animations ---
+    const observerOptions = { threshold: 0.1 };
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
