@@ -1,25 +1,21 @@
 /* CSS Design System for Chef SuperDad's BBQ and Catering */
 
 :root {
-    /* Color Palette */
-    --bg-dark: #1a1208;
-    --ember-red: #c0391b;
-    --amber-gold: #f5c842;
+    --bg-dark: #0a0a0a;
+    --bg-textured: #121212;
+    --amber-gold: #ff9d00; /* More vibrant orange-gold from menu */
+    --ember-red: #d32f2f;
+    --distressed-white: #e0e0e0;
     --cream: #fdf6e3;
-    --text-main: #fdf6e3;
-    --text-muted: rgba(253, 246, 227, 0.7);
-    
-    /* Typography */
-    --font-display: 'Playfair Display', serif;
-    --font-label: 'Oswald', sans-serif;
+    --text-muted: #a0a0a0;
+    --font-display: 'Bebas Neue', cursive; /* Distressed/Bold look */
     --font-body: 'Lato', sans-serif;
+    --font-label: 'Oswald', sans-serif;
+    --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     
     /* Spacing */
     --section-padding: 100px 5%;
     --container-width: 1200px;
-    
-    /* Transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -34,13 +30,34 @@ html {
 
 body {
     background-color: var(--bg-dark);
-    color: var(--text-main);
+    color: var(--text-muted);
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, .logo {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 0.9;
+    color: var(--distressed-white);
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 3.5rem;
+    color: var(--amber-gold);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h3, h4 {
     font-family: var(--font-display);
     font-weight: 700;
 }
@@ -141,11 +158,72 @@ header.scrolled {
     z-index: 2;
 }
 
-.hero h1 {
-    font-size: clamp(3rem, 8vw, 5rem);
-    margin-bottom: 20px;
-    line-height: 1.1;
-    color: var(--cream);
+/* Advanced Animations & Style Refinements */
+.header-cow-icon {
+    width: 60px;
+    height: auto;
+    filter: invert(1);
+    margin-left: 15px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.distressed {
+    color: var(--amber-gold);
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.8);
+    position: relative;
+}
+
+.distressed::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--amber-gold);
+}
+
+/* Glitch Effect on Hover for Headlines */
+h1:hover {
+    animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Texture Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.hero-bottom-flames {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, rgba(255, 157, 0, 0.2), transparent);
+    pointer-events: none;
 }
 
 .hero p {
@@ -214,12 +292,6 @@ section {
 .section-title {
     text-align: center;
     margin-bottom: 60px;
-}
-
-.section-title h2 {
-    font-size: 3rem;
-    color: var(--amber-gold);
-    margin-bottom: 10px;
 }
 
 .section-title .underline {
@@ -411,113 +483,131 @@ section {
     color: var(--text-muted);
 }
 
-/* --- Gallery Section --- */
+/* Gallery Carousel */
 .gallery {
-    background: #1f160a;
-}
-
-.gallery-filters {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    padding: 8px 20px;
-    background: transparent;
-    border: 1px solid var(--amber-gold);
-    color: var(--cream);
-    font-family: var(--font-label);
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: var(--transition-smooth);
-    border-radius: 4px;
-    letter-spacing: 1px;
-}
-
-.filter-btn.active, .filter-btn:hover {
-    background: var(--amber-gold);
-    color: var(--bg-dark);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: 250px;
-    grid-auto-flow: dense;
-    gap: 15px;
-}
-
-.gallery-item {
-    position: relative;
+    background: var(--bg-dark);
+    padding: 100px 0;
     overflow: hidden;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-.gallery-item img {
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.carousel-slide {
+    min-width: calc(33.333% - 14px);
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 992px) {
+    .carousel-slide { min-width: calc(50% - 10px); }
+}
+@media (max-width: 576px) {
+    .carousel-slide { min-width: 100%; }
+}
+
+.carousel-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    filter: brightness(0.9);
+    transition: transform 0.5s ease;
 }
 
-.gallery-item:hover img {
+.carousel-slide:hover img {
     transform: scale(1.1);
-    filter: brightness(1.1);
 }
 
-.gallery-item.featured {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.gallery-item.wide {
-    grid-column: span 2;
-}
-
-.gallery-item.tall {
-    grid-row: span 2;
-}
-
-/* Lightbox UI */
-.lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.95);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-    padding: 20px;
-}
-
-.lightbox-content {
-    max-width: 90%;
-    max-height: 90%;
-    position: relative;
-}
-
-.lightbox img {
-    max-width: 100%;
-    max-height: 85vh;
-    border: 4px solid var(--amber-gold);
-    box-shadow: 0 0 50px rgba(0,0,0,1);
-}
-
-.lightbox-close {
+.carousel-btn {
     position: absolute;
-    top: -50px;
-    right: 0;
-    color: var(--cream);
-    font-size: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--amber-gold);
+    color: var(--bg-dark);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     cursor: pointer;
+    z-index: 10;
+    font-size: 1.2rem;
+    transition: var(--transition-smooth);
+}
+
+.carousel-btn:hover {
+    background: var(--distressed-white);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev { left: -25px; }
+.carousel-btn.next { right: -25px; }
+
+/* Menu Redesign (Two Column) */
+.menu-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: url('images/texture-dark.png'); /* We can simulate this with a gradient */
+    background-color: #121212;
+    padding: 60px;
+    border-radius: 20px;
+    border: 2px solid rgba(255,157,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .menu-grid-layout { grid-template-columns: 1fr; }
+}
+
+.menu-column h3 {
+    color: var(--amber-gold);
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--amber-gold);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.menu-item-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.menu-item-row h4 {
+    font-family: var(--font-label);
+    font-size: 1.3rem;
+    color: var(--distressed-white);
+}
+
+.menu-item-row .price {
+    color: var(--amber-gold);
+    font-family: var(--font-label);
+    font-weight: bold;
+}
+
+.menu-item-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 20px;
 }
 
 /* --- Quote Form Section --- */
