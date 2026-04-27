@@ -591,6 +591,113 @@ section {
     }
 }
 
+/* Service Area Banner */
+.service-area-banner {
+    background: var(--amber-gold);
+    color: var(--bg-dark);
+    padding: 20px 0;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #1a1208;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(245, 200, 66, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--amber-gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--amber-gold);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-family: var(--font-display);
+    margin-bottom: 15px;
+    color: var(--distressed-white);
+}
+
+/* FAQ Section */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #1a1208;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--amber-gold);
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(245, 200, 66, 0.05);
+}
+
+.faq-answer {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--text-muted);
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 30px 20px;
+    max-height: 200px;
+}
+
+.faq-item.active i {
+    transform: rotate(180deg);
+}
+
+/* Testimonial CTA */
+.testimonial-cta {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background: rgba(245, 200, 66, 0.05);
+    border-radius: 12px;
+}
+
+.testimonial-cta a {
+    color: var(--amber-gold);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
 /* Menu Redesign (Two Column) */
 .menu-grid-layout {
     display: grid;

@@ -75,6 +75,41 @@ document.addEventListener('DOMContentLoaded', () => {
         animate();
     }
 
+    // --- FAQ Accordion ---
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            faqItems.forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+        });
+    });
+
+    // --- Smooth Scroll for All Anchors ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+                
+                // Close mobile menu if open
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                }
+            }
+        });
+    });
+
     // --- Scroll Animations ---
     const observerOptions = { threshold: 0.1 };
     const revealObserver = new IntersectionObserver((entries) => {
@@ -86,15 +121,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.reveal-text, .menu-grid-layout, .carousel-slide').forEach(el => {
+    document.querySelectorAll('.reveal-text, .menu-grid-layout, .bento-item, .service-card, .testimonial-card').forEach(el => {
         revealObserver.observe(el);
     });
 
     // Add styles for the animations
     const style = document.createElement('style');
     style.textContent = `
-        .reveal-text { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
-        .reveal-text.active { opacity: 1; transform: translateY(0); }
+        .reveal-text, .bento-item, .service-card, .testimonial-card { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal-text.active, .bento-item.active, .service-card.active, .testimonial-card.active { opacity: 1; transform: translateY(0); }
         .menu-grid-layout { opacity: 0; transform: scale(0.95); transition: all 1s ease-out; }
         .menu-grid-layout.active { opacity: 1; transform: scale(1); }
     `;
