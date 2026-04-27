@@ -322,56 +322,102 @@
                 <h2>From the Pit to the Table</h2>
                 <div class="underline"></div>
             </div>
+
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="meats">The Meats</button>
+                <button class="filter-btn" data-filter="sides">The Sides</button>
+                <button class="filter-btn" data-filter="catering">Catering</button>
+                <button class="filter-btn" data-filter="pitmaster">The Pitmaster</button>
+            </div>
             
             <div class="gallery-grid">
-                <div class="gallery-item featured">
+                <!-- Pitmaster & Catering -->
+                <div class="gallery-item featured" data-category="pitmaster">
                     <img src="images/gallery/gallery-kitchen.jpg" alt="Cameron in the Kitchen">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item tall" data-category="pitmaster">
                     <img src="images/gallery/gallery-pitmaster-pose.jpg" alt="Pitmaster Cameron Posing">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item wide" data-category="catering">
                     <img src="images/gallery/gallery-catering-spread.jpg" alt="SuperDad's BBQ Catering Spread">
                 </div>
-                <div class="gallery-item">
+
+                <!-- Meats -->
+                <div class="gallery-item tall" data-category="meats">
                     <img src="images/gallery/1000015478.JPG" alt="Smoked Glazed Meatloaf">
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery/1000004933.JPG" alt="Smoked Potatoes and Sausage">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery/1000005750.JPG" alt="BBQ Catering">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery/1000005797.JPG" alt="Pulled Pork Spread">
-                </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="meats">
                     <img src="images/gallery/1000006194.JPG" alt="Smoked Ribs">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item wide" data-category="meats">
                     <img src="images/gallery/1000006218.JPG" alt="BBQ Chicken">
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery/1000006342.JPG" alt="Catering Service">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery/1000006608.JPG" alt="BBQ Sides">
-                </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="meats">
                     <img src="images/gallery/1000006623.JPG" alt="Freshly Smoked Meats">
                 </div>
-                <div class="gallery-item">
-                    <img src="images/gallery/1000006679.JPG" alt="Chef SuperDad's BBQ & Catering">
+                <div class="gallery-item featured" data-category="meats">
+                    <img src="images/gallery/1000015327.JPG" alt="BBQ Platter">
                 </div>
-                <div class="gallery-item">
+
+                <!-- Sides -->
+                <div class="gallery-item wide" data-category="sides">
+                    <img src="images/gallery/1000004933.JPG" alt="Smoked Potatoes and Sausage">
+                </div>
+                <div class="gallery-item" data-category="sides">
+                    <img src="images/gallery/1000006608.JPG" alt="BBQ Sides">
+                </div>
+                <div class="gallery-item tall" data-category="sides">
+                    <img src="images/gallery/1000015104.JPG" alt="Baked Mac n Cheese">
+                </div>
+
+                <!-- Catering & More -->
+                <div class="gallery-item" data-category="catering">
+                    <img src="images/gallery/1000005750.JPG" alt="BBQ Catering">
+                </div>
+                <div class="gallery-item tall" data-category="catering">
+                    <img src="images/gallery/1000006342.JPG" alt="Catering Service">
+                </div>
+                <div class="gallery-item wide" data-category="catering">
                     <img src="images/gallery/1000007202.JPG" alt="Event Catering">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="pitmaster">
                     <img src="images/gallery/1000007249.JPG" alt="Pitmaster at Work">
                 </div>
+
+                <!-- Bulk Additions -->
+                <div class="gallery-item tall" data-category="meats"><img src="images/gallery/1000005797.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item" data-category="meats"><img src="images/gallery/1000006679.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item wide" data-category="catering"><img src="images/gallery/1000013112.JPG" alt="Catering"></div>
+                <div class="gallery-item" data-category="meats"><img src="images/gallery/1000013703.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item tall" data-category="sides"><img src="images/gallery/1000013936.JPG" alt="Side Item"></div>
+                <div class="gallery-item wide" data-category="meats"><img src="images/gallery/1000014230.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item" data-category="sides"><img src="images/gallery/1000014242.JPG" alt="Side Item"></div>
+                <div class="gallery-item tall" data-category="meats"><img src="images/gallery/1000015075.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item" data-category="meats"><img src="images/gallery/1000015237.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item wide" data-category="meats"><img src="images/gallery/1000015865.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item" data-category="meats"><img src="images/gallery/1000015944.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item tall" data-category="meats"><img src="images/gallery/1000016045.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item" data-category="meats"><img src="images/gallery/1000017446.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item wide" data-category="meats"><img src="images/gallery/1000017772.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item" data-category="meats"><img src="images/gallery/1000017847.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item tall" data-category="meats"><img src="images/gallery/1000018078.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item" data-category="catering"><img src="images/gallery/1000019669.JPG" alt="Catering Event"></div>
+                <div class="gallery-item wide" data-category="catering"><img src="images/gallery/1000020968.JPG" alt="Catering Event"></div>
+                <div class="gallery-item" data-category="meats"><img src="images/gallery/1000022322.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item tall" data-category="meats"><img src="images/gallery/1000023023.JPG" alt="BBQ Item"></div>
+                <div class="gallery-item" data-category="catering"><img src="images/gallery/1000025974.JPG" alt="Catering Event"></div>
             </div>
         </div>
     </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" id="lightbox-close">&times;</span>
+            <img src="" id="lightbox-img" alt="Enlarged Photo">
+        </div>
+    </div>
 
     <!-- Quote Section -->
     <section class="quote" id="quote">
