@@ -110,6 +110,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- GLightbox Initialization ---
+    const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+    });
+
+    // --- View All Gallery Toggle ---
+    const viewAllBtn = document.getElementById('view-all-gallery');
+    const hiddenItems = document.querySelectorAll('.hidden-item');
+    
+    if (viewAllBtn) {
+        viewAllBtn.addEventListener('click', () => {
+            hiddenItems.forEach(item => {
+                item.style.display = 'inline-block';
+                // Trigger a slight delay for animation
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                }, 10);
+            });
+            viewAllBtn.style.display = 'none';
+            // Refresh GLightbox to include new items
+            lightbox.reload();
+        });
+    }
+
     // --- Scroll Animations ---
     const observerOptions = { threshold: 0.1 };
     const revealObserver = new IntersectionObserver((entries) => {

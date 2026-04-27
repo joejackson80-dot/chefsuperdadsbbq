@@ -14,6 +14,9 @@
     <meta property="og:description" content="Real wood-smoked BBQ for your Omaha event. Brisket, ribs, pulled pork & more.">
     <meta property="og:image" content="https://www.chefsuperdadsbbq.com/images/og-image.png">
     
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -310,80 +313,78 @@
         </div>
     </section>
 
-    <!-- Gallery Section (Immersive Bento) -->
-    <section class="gallery" id="gallery">
+    <!-- Gallery Section (Masonry & Instagram) -->
+    <section class="gallery-wrapper" id="gallery">
         <div class="container">
             <div class="section-title">
-                <h2>Our Pit in Action</h2>
+                <h2>From the Pit to the Table</h2>
+                <p>Real events. Real food. Real community.</p>
                 <div class="underline"></div>
             </div>
             
-            <div class="bento-grid">
-                <!-- Row 1 & 2 -->
-                <div class="bento-item bento-featured">
-                    <img src="images/gallery/gallery-kitchen.jpg" alt="The Pitmaster">
-                    <div class="bento-overlay">
-                        <div class="overlay-info">
-                            <h4>The Pitmaster</h4>
-                            <p>Real Smoke. Real Tradition.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bento-item">
-                    <img src="images/gallery/1000006194.JPG" alt="Smoked Ribs">
-                    <div class="bento-overlay">
-                        <div class="overlay-info">
-                            <h4>Glazed Ribs</h4>
-                            <p>Fall-off-the-bone</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bento-item bento-tall">
-                    <img src="images/gallery/1000015104.JPG" alt="Mac n Cheese">
-                    <div class="bento-overlay">
-                        <div class="overlay-info">
-                            <h4>Baked Sides</h4>
-                            <p>Soul Food Classics</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bento-item">
-                    <img src="images/gallery/1000006218.JPG" alt="Smoked Chicken">
-                    <div class="bento-overlay">
-                        <div class="overlay-info">
-                            <h4>Pit Chicken</h4>
-                            <p>Juicy & Tender</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="masonry-grid" id="masonry-grid">
+                <!-- Initial 12 photos -->
+                <div class="masonry-item"><a href="images/gallery/1000006194.JPG" class="glightbox" data-gallery="bbq" data-title="Smoked Pork Ribs" data-description="Fall-off-the-bone slabs at an Omaha corporate event, 2024."><img src="images/gallery/1000006194.JPG" alt="Smoked pork ribs catering spread in Omaha NE" loading="lazy"></a></div>
+                <div class="masonry-item"><a href="images/gallery/1000015478.JPG" class="glightbox" data-gallery="bbq" data-title="Signature Meatloaf" data-description="North Omaha's favorite smoked meatloaf, 2024."><img src="images/gallery/1000015478.JPG" alt="Cameron Lollar's signature smoked meatloaf catering" loading="lazy"></a></div>
+                <div class="masonry-item"><a href="images/gallery/1000015104.JPG" class="glightbox" data-gallery="bbq" data-title="Baked Mac n Cheese" data-description="Soul food classics for a community fundraiser, 2024."><img src="images/gallery/1000015104.JPG" alt="Baked mac and cheese catering side in North Omaha" loading="lazy"></a></div>
+                <div class="masonry-item"><a href="images/gallery/gallery-pitmaster-pose.jpg" class="glightbox" data-gallery="bbq" data-title="Cameron at the Pit" data-description="North Omaha Pitmaster Cameron Lollar tending the smoke."><img src="images/gallery/gallery-pitmaster-pose.jpg" alt="Cameron Lollar pitmaster posing at BBQ event Omaha" loading="lazy"></a></div>
+                <div class="masonry-item"><a href="images/gallery/1000006218.JPG" class="glightbox" data-gallery="bbq" data-title="Smoked Chicken" data-description="Pit-fresh chicken for a backyard cookout."><img src="images/gallery/1000006218.JPG" alt="Juicy smoked chicken BBQ catering Omaha" loading="lazy"></a></div>
+                <div class="masonry-item"><a href="images/gallery/1000015327.JPG" class="glightbox" data-gallery="bbq" data-title="Brisket Spread" data-description="Slow-smoked brisket at a local graduation party."><img src="images/gallery/1000015327.JPG" alt="Smoked brisket catering spread Omaha NE" loading="lazy"></a></div>
+                <div class="masonry-item"><a href="images/gallery/1000004933.JPG" class="glightbox" data-gallery="bbq" data-title="Smoked Potatoes" data-description="Our signature smoked potato sides."><img src="images/gallery/1000004933.JPG" alt="Smoked potatoes BBQ side dish Omaha" loading="lazy"></a></div>
+                <div class="masonry-item"><a href="images/gallery/1000015075.JPG" class="glightbox" data-gallery="bbq" data-title="Event Setup" data-description="Full-service catering setup in Omaha."><img src="images/gallery/1000015075.JPG" alt="Professional BBQ catering setup Omaha NE" loading="lazy"></a></div>
+                <div class="masonry-item"><a href="images/gallery/1000025974.JPG" class="glightbox" data-gallery="bbq" data-title="Community Table" data-description="Feeding the North Omaha community."><img src="images/gallery/1000025974.JPG" alt="BBQ community event North Omaha" loading="lazy"></a></div>
+                
+                <!-- Hidden items (expanded by View All) -->
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000005750.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000005750.JPG" alt="Catering tray Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000005797.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000005797.JPG" alt="BBQ Meat Spread Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000006342.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000006342.JPG" alt="Ribs close up Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000006608.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000006608.JPG" alt="Smoked meats tray Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000006623.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000006623.JPG" alt="Wings catering Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000006679.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000006679.JPG" alt="BBQ event Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000007202.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000007202.JPG" alt="Smoked ribs tray Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000007249.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000007249.JPG" alt="Catering event Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000013112.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000013112.JPG" alt="BBQ buffet Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000013703.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000013703.JPG" alt="Brisket platter Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000013936.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000013936.JPG" alt="BBQ catering service Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000014230.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000014230.JPG" alt="Party wings platter Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000014242.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000014242.JPG" alt="BBQ sides Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000015237.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000015237.JPG" alt="Catering pans BBQ Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000015865.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000015865.JPG" alt="Smoked potatoes close up" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000015944.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000015944.JPG" alt="BBQ event North Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000016045.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000016045.JPG" alt="Catering spread North Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000017446.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000017446.JPG" alt="BBQ tray" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000017772.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000017772.JPG" alt="Large BBQ catering order" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000017847.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000017847.JPG" alt="Catering pans setup" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000018078.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000018078.JPG" alt="BBQ event Omaha NE" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000019669.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000019669.JPG" alt="Smoked meatloaf North Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000020968.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000020968.JPG" alt="BBQ catering pans North Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000022322.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000022322.JPG" alt="Rib slabs Omaha" loading="lazy"></a></div>
+                <div class="masonry-item hidden-item"><a href="images/gallery/1000023023.JPG" class="glightbox" data-gallery="bbq"><img src="images/gallery/1000023023.JPG" alt="Smoked wings tray Omaha" loading="lazy"></a></div>
+            </div>
+            
+            <div class="gallery-actions">
+                <button id="view-all-gallery" class="btn btn-secondary">View All Photos</button>
+            </div>
+        </div>
 
-                <!-- Row 3 -->
-                <div class="bento-item bento-wide">
-                    <img src="images/gallery/gallery-catering-spread.jpg" alt="Catering Spread">
-                    <div class="bento-overlay">
-                        <div class="overlay-info">
-                            <h4>Full Service Catering</h4>
-                            <p>Feeding the Community</p>
-                        </div>
-                    </div>
+        <!-- Instagram Feed Strip -->
+        <div class="instagram-strip">
+            <div class="container">
+                <div class="strip-header">
+                    <h3>Follow the Smoke 🔥</h3>
+                    <p>@chefsuperdadsbbq on Instagram</p>
                 </div>
-                <div class="bento-item">
-                    <img src="images/gallery/1000015478.JPG" alt="Smoked Meatloaf">
-                    <div class="bento-overlay">
-                        <div class="overlay-info">
-                            <h4>Signature Meatloaf</h4>
-                            <p>A Local Favorite</p>
-                        </div>
-                    </div>
+                
+                <!-- Instagram Placeholder Grid (No real embed yet) -->
+                <div class="instagram-grid">
+                    <div class="ig-placeholder"><i class="fab fa-instagram"></i></div>
+                    <div class="ig-placeholder"><i class="fab fa-instagram"></i></div>
+                    <div class="ig-placeholder"><i class="fab fa-instagram"></i></div>
+                    <div class="ig-placeholder"><i class="fab fa-instagram"></i></div>
                 </div>
-                <div class="bento-item">
-                    <img src="images/gallery/1000004933.JPG" alt="Smoked Potatoes">
-                    <div class="bento-overlay">
-                        <div class="overlay-info">
-                            <h4>Smoked Potatoes</h4>
-                            <p>Signature Side</p>
-                        </div>
-                    </div>
+                
+                <div class="strip-cta">
+                    <a href="https://instagram.com/chefsuperdadsbbq" target="_blank" class="btn btn-primary btn-sm">Follow Us on Instagram</a>
                 </div>
             </div>
         </div>
@@ -582,6 +583,8 @@
     </footer>
 
     <!-- JS -->
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
