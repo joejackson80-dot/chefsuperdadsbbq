@@ -148,17 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.reveal-text, .menu-grid-layout, .bento-item, .service-card, .testimonial-card').forEach(el => {
+    document.querySelectorAll('.reveal-text, .service-card, .testimonial-card, .masonry-item, .menu-item').forEach(el => {
         revealObserver.observe(el);
     });
-
-    // Add styles for the animations
-    const style = document.createElement('style');
-    style.textContent = `
-        .reveal-text, .bento-item, .service-card, .testimonial-card { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .reveal-text.active, .bento-item.active, .service-card.active, .testimonial-card.active { opacity: 1; transform: translateY(0); }
-        .menu-grid-layout { opacity: 0; transform: scale(0.95); transition: all 1s ease-out; }
-        .menu-grid-layout.active { opacity: 1; transform: scale(1); }
-    `;
-    document.head.appendChild(style);
 });
